@@ -44,7 +44,9 @@
   <div style="margin-left: 50px">
     <h1>Pixel-S</h1>      
     <p>Speak through Pictures</p>
-    <p>Please Sign-up to add Your Own Albums and Pictures </p><span><%= link_to "Sign_up", new_user_registration_path ,class: "btn btn-lg btn-primary"%></span>
+    <% if !user_signed_in? %>
+      <p>Please Sign-up to add Your Own Albums and Pictures </p><span><%= link_to "Sign_up", new_user_registration_path ,class: "btn btn-lg btn-primary"%></span>
+    <% end %>  
   </div>  
 </div>
 <div class="container">

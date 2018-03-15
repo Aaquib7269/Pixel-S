@@ -2,7 +2,7 @@
 
 <h1 style="text-align: center">All Albums</h1>
 <% if user_signed_in? %>
-  <%= link_to "Add Album",albums_path ,class: "btn btn-primary"%>
+  <%= link_to "Add Album",new_album_path ,class: "btn  btn-lg btn-primary",style: "margin-bottom: 40px"%>
 <% end %>
 
 
@@ -17,7 +17,7 @@
                   <div class="panel-body">
                     <b>uploded  <%= time_ago_in_words(album.created_at)%> ago &nbspby&nbsp <strong style ="color:lightblue"><%= link_to album.user.email,uploder_path(album.user) %></strong></b><br>
                     <span class="glyphicon glyphicon-search"></span><%= link_to 'Show', album %>
-                    <%  if user_signed_in? %>
+                    <%  if user_signed_in? && current_user.try(:id) == album.user.id %>
                        <%= link_to 'Edit', edit_album_path(album) %>
                        <%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } %>
                     <% end %>

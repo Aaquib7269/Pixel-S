@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <div style="float:right">
-  <% if user_signed_in? %>
+  <% if user_signed_in?  && current_user.try(:id) == @album.user.id %>
    <%= link_to 'Upload a Pic', new_album_pic_path(@album),class: "btn btn-danger"  %> 
   <% end %>
 </div>
