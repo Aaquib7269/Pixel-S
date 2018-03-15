@@ -1,0 +1,16 @@
+<% @pics.each do |p| %>
+	<div class="container" style="width:100%;">
+  		<div class="row">
+    		<div class="col-md-4" style="text-align: center;border: 1px solid #ccc">
+        		<div style = "padding:5px;">
+        			<%= image_tag p.avatar.url(:thumb)%>
+        			<div style="margin-top: 5px">
+ 						<%= p.title%><br>
+ 					 	<b>uploded  <%= time_ago_in_words(p.created_at)%> ago &nbspby&nbsp <strong style ="color:lightblue"><%= link_to p.user.email,uploder_path(p.user) %></strong></b>
+ 					</div> 	
+ 					
+ 			</div><br>
+ 				</div>		
+<%end%>
+  		</div>
+	</div>		  
