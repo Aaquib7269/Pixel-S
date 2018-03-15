@@ -14,7 +14,8 @@
   				  <%= image_tag p.avatar.url(:thumb)%>
   				  <div style="margin-top: 5px">
               <%= p.title%><br>
-              <b>uploded  <%= time_ago_in_words(p.created_at)%> ago &nbspby&nbsp <strong style ="color:lightblue"><%= link_to p.user.email,uploder_path(p.user) %></strong></b>
+              <b>uploded  <%= time_ago_in_words(p.created_at)%> ago &nbspby&nbsp <strong style ="color:lightblue"><%= link_to p.user.email,uploder_path(p.user) %></strong></b><br>
+              <%= link_to 'Destroy',[@album,p], method: :delete, data: { confirm: 'Are you sure?' } %>
             </div> 
           </div><br>
  			  </div>		

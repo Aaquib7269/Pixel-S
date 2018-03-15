@@ -50,7 +50,7 @@ class PicsController < ApplicationController
   def destroy
     @pic.destroy
     respond_to do |format|
-      format.html { redirect_to pics_url, notice: 'Pic was successfully destroyed.' }
+      format.html { redirect_to @album, notice: 'Pic was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
