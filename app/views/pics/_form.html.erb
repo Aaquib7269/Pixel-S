@@ -14,15 +14,15 @@
   
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title ,class: "form-control"%>
   </div>
 
   <div class="field">
     <%= f.label :avatar %><br>
-    <%= f.file_field :avatar %>
-  </div>
+    <%= f.file_field :avatar,class: "form-control" %>
+  </div><br>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="box-footer">
+    <%= f.submit class: "btn btn-danger" %>
   </div>
 <% end %>
