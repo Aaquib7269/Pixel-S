@@ -1,6 +1,6 @@
 == README
 
-Pixel-S is a Image sharing app build especially for the Photography addicts.One can create as many albums as he wants consisting of various images.Pixel-S is build using Ruby on rails and the database used is mongodb.  
+Pixel-S is a Image sharing app build especially for the Photography addicts.One can create as many albums as he wants consisting of various images.Users can add/edit/delete their own albums.every user is able to look at other users album but cant edit/destroy other users album.Similary user can add maximum 25 pictures in a album.User need to sign-in to add/delete albums and pictures.Pixel-S is build using Ruby on rails and the database used is mongodb.  
 
 * Ruby version - 2.3.1
 
