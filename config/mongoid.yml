@@ -101,5 +101,6 @@ test:
         retry_interval: 0
         
 production:
-   <<: *default
-   adapter: postgresql
+  sessions:
+    default:
+      uri: <%= ENV['MONGOLAB_URI'] %>
